@@ -1,0 +1,72 @@
+body {
+  background-color: #FFFFFF;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  margin-left: 15px;
+  width: 600px;
+  flex-direction: column;
+}
+
+div#child-title {
+  font-size: 20;
+  color: #333333;
+}
+
+div#title {
+  font-size: 30;
+  color: #111111;
+  font-family: 
+}
+
+div#left-separator {
+  width: 350px;
+  height: 5px;
+  color: #333333;
+}
+
+div#right-separator {
+  width: 150px;
+  height: 5px;
+  color: #333333;
+}
+
+div#info-text {
+  font-size: 15;
+  color: #666666;
+  line-height: 22px;
+}
+
+.header {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.header-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.left {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  width: 200px;
+  display: flex;
+  margin-left: 50px;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
