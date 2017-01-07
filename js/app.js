@@ -6,6 +6,16 @@ var dotLine = Vue.extend({
   template: '<hr style="height:1px;border:none;border-top:1px dashed #BBBBBB;" width="100%" />'
 });
 
+var education = Vue.extend({
+  template: '#education-template',
+  props: {
+    university: String,
+    school: String,
+    period: String,
+    degree: String
+  }
+})
+
 var exprienceItem = Vue.extend({
   props: ['message'],
   template: '<li><div id="info-text">{{ message }}</div></li>'
@@ -36,11 +46,18 @@ var exprienceInfo = Vue.extend({
   }
 });
 
+var data;
+$.getJSON("../resume.json", function(json) {
+  data = json;
+    console.log(json); // this will show the info it in firebug console
+});
+
+
 var dataArray = ["nimei", "nimei"];
 new Vue({
   el: '.container',
   components: {
-    'exprience': {
+    'experience': {
       render: function(createElement) {
         return createElement(
           'div', [createElement(exprienceHeader, {
@@ -50,6 +67,20 @@ new Vue({
               company: '啦啦啦啦'
             }
           }), createElement(exprienceInfo)]
+        )
+      }
+    },
+    'education': {
+      render: function(createElement) {
+        return createElement(
+          education, {
+            props: {
+              university: '清华大学',
+              school: '计算机科学与技术',
+              period: '2009.9~2013.6',
+              degree: '本科'
+            }
+          }
         )
       }
     },
